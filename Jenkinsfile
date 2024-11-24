@@ -7,6 +7,7 @@ pipeline {
     stages {
         stage('Setup') {
             steps {
+                sh 'echo "Server IP is: $SERVER_IP"'
                 sh "python3 --version"
                 sh "python3 -m ensurepip --upgrade"
                 sh "python3 -m pip install --upgrade pip"
